@@ -60,7 +60,10 @@ macx {
 }
 
 DISTFILES += \
-    qml/family/family.qml \
+    qml/family/Scene.qml \
+    qml/family/Scene2.qml \
+    qml/family/Scene3.qml \
+    qml/family/Scene4.qml \
     qml/greetings/greeting.qml \
     qml/letters/letter.qml \
     qml/tasks/task1.qml \

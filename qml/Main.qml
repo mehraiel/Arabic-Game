@@ -50,21 +50,23 @@ GameWindow {
             }
 
         }
+   Rectangle{
+       Image {
+           id: name
+           source: "../images/family.jpg"
 
-
-        GameButton{
-            text: "العائله"
-            onClicked: {
-
-            var component = Qt.createComponent("family/family.qml");
-                var window = component.createObject(gameWindow);
-                scene.visible=false
-                window.show
-            }
-
-        }
-
-        }
+           width:50
+           height: 50
+       }
+       IconButton{
+          onClicked:{
+              var component = Qt.createComponent("family/Scene.qml");
+                  var window = component.createObject(gameWindow);
+                  scene.visible=false
+                  window.show
+              }
+          }
+       }
 
 
         Row{
@@ -122,7 +124,7 @@ GameWindow {
 
 
 
-
+}
 
      }
 }
