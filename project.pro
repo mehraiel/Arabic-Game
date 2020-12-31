@@ -60,14 +60,17 @@ macx {
 }
 
 DISTFILES += \
+    assets/ImagesTasks/grandfather.png \
     qml/family/Scene.qml \
     qml/family/Scene2.qml \
     qml/family/Scene3.qml \
     qml/family/Scene4.qml \
     qml/greetings/greeting.qml \
     qml/letters/letter.qml \
-    qml/tasks/task1.qml \
-    qml/tasks/task2.qml \
-    qml/tasks/task3 \
-    qml/tasks/task3.qml \
-    qml/tasks/tasks.qml
+    qml/tasks/Task2.qml \
+    qml/tasks/Task3.qml \
+    qml/tasks/Task4.qml \
+    qml/tasks/Task5.qml \
+    qml/tasks/Task6.qml \
+    qml/tasks/Task7.qml \
+    qml/tasks/task3
