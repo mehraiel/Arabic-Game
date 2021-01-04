@@ -67,10 +67,10 @@ DISTFILES += \
     qml/family/Scene4.qml \
     qml/greetings/greeting.qml \
     qml/letters/letter.qml \
+    qml/tasks/DestinationPage.qml \
     qml/tasks/Task2.qml \
     qml/tasks/Task3.qml \
     qml/tasks/Task4.qml \
     qml/tasks/Task5.qml \
     qml/tasks/Task6.qml \
-    qml/tasks/Task7.qml \
     qml/tasks/task3

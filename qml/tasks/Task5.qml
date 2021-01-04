@@ -2,7 +2,7 @@ import QtQuick 2.0
 import Felgo 3.0
 import QtMultimedia 5.12
 Scene {
-    id: question1
+    id: question2
     Rectangle{
         anchors.fill: parent
         color:"#ffffff"
@@ -168,7 +168,7 @@ Scene {
 
                        var component = Qt.createComponent("Task6.qml");
                            var window = component.createObject(gameWindow);
-                           question1.visible=false
+                           question2.visible=false
                            window.show
 
                       }
