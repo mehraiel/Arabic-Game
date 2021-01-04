@@ -130,7 +130,7 @@ anchors.fill: parent.gameWindowAnchorItem
    ////animation on images and text
    NumberAnimation {
           running: true             // Start automatically
-          loops: Animation.alwaysRunToEnd// Repeat endless (unless stopped)
+          loops: Animation.alwaysRunToEnd// Repeat to end
           target: rectangle             // The animated item id
           property: "rotation"      // The animated property
           from: 0                   // Start value. If not defined, the current value is used
