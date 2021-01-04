@@ -3,7 +3,7 @@ import QtQuick 2.0
 import QtMultimedia 5.12
 
 Scene {
-  id:lett12
+  id:lett2728
  Rectangle{
 anchors.fill: parent.gameWindowAnchorItem
  color: "white"
@@ -28,10 +28,10 @@ anchors.fill: parent.gameWindowAnchorItem
 
        width: 100
        height: 100
-       source: "../letters/image/alef.jpg"
+       source: "../letters/image/waw.jpg"
        Text {
            id:text
-           text: "أ-الف"
+           text: "و-واو"
 
               font.pointSize: 30
            anchors.bottom: img1.bottom
@@ -47,7 +47,7 @@ anchors.fill: parent.gameWindowAnchorItem
       }
            SoundEffect{
            id:sound
-           source: "./sounds/alef.wav"
+           source: "./sounds/waw.wav"
            loops: sound.Infinite
 
 
@@ -64,12 +64,12 @@ anchors.fill: parent.gameWindowAnchorItem
          anchors.rightMargin: 30
        width: 100
        height: 100
-       source: "../letters/image/ba2on.jpg"
+       source: "../letters/image/yeh.jpg"
 
 
      Text {
          id:text1
-         text: "ب- باء"
+         text: "ي-ياء"
             font.pointSize: 30
          anchors.bottom: img2.bottom
          anchors.bottomMargin: -75
@@ -84,7 +84,7 @@ anchors.fill: parent.gameWindowAnchorItem
 }
          SoundEffect{
          id:sound1
-         source: "./sounds/ba2.wav"
+         source: "./sounds/ya2.wav"
          loops: sound.Infinite
 
 
@@ -98,24 +98,17 @@ anchors.fill: parent.gameWindowAnchorItem
 
 
 
-   AppButton {
-       id:btn3
-     anchors.verticalCenter: parent.verticalCenter
-     anchors.right: parent.right
-     anchors.rightMargin: 10
-     icon:IconType.arrowright
-     iconSize: dp(50)
-     flat: true
+ GameButton{
+       text: "الرجوع"
+       onClicked: {
+           var component = Qt.createComponent("../Main.qml");
+           var window = component.createObject(gameWindow);
+           lett2728.visible=false
+           window.show
+       }
+   }
 
-         onClicked: {
-             var component = Qt.createComponent("letter3and4.qml")
-             var window =component.createObject(gameWindow)
-            scene.visiblefalse
-             window.show
-
-         }
-           }
-   NumberAnimation {
+   NumberAnimation{
              running: true             // Start automatically
              loops: Animation.alwaysRunToEnd// Repeat endless (unless stopped)
              target: rectangle             // The animated item id
