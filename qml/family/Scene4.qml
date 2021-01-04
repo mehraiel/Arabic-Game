@@ -9,10 +9,20 @@ anchors.fill: parent.gameWindowAnchorItem
  }
     Text {
         id: txt
-        font.pixelSize: 30
+        font.pixelSize: 50
+        font.family: "Arabic Typesetting"
         anchors.horizontalCenter: parent.horizontalCenter
         text: qsTr("هيا نتعلم اسماء العائلة")
     }
+    GameButton{
+          text: "الرجوع"
+          onClicked: {
+              var component = Qt.createComponent("../Main.qml");
+              var window = component.createObject(gameWindow);
+               scen1.visible=false
+              window.show
+          }
+      }
 
 
  Rectangle {
@@ -31,8 +41,8 @@ anchors.fill: parent.gameWindowAnchorItem
        Text {
            id:text
            text: "جدتي"
-
-              font.pointSize: 30
+           font.family: "Aref Ruqaa"
+              font.pointSize: 20
            anchors.bottom: img1.bottom
             anchors.bottomMargin: -80
           }
@@ -69,7 +79,8 @@ anchors.fill: parent.gameWindowAnchorItem
      Text {
          id:text1
          text:"جدي"
-         font.pointSize: 30
+         font.family: "Aref Ruqaa"
+         font.pointSize: 20
          anchors.bottom: img2.bottom
          anchors.bottomMargin: -75
          anchors.left: img2.left
@@ -101,14 +112,14 @@ anchors.fill: parent.gameWindowAnchorItem
       id:btn3
      anchors.verticalCenter: parent.verticalCenter
      anchors.right: rectangle.left
-     anchors.rightMargin: 200
+     anchors.rightMargin: 100
      icon:IconType.arrowleft
      iconSize: dp(50)
      flat:true
      onClicked: {
          var component = Qt.createComponent("Scene3.qml")
          var window =component.createObject(gameWindow)
-        scene.visiblefalse
+        scen1.visiblefalse
          window.show
 
      }

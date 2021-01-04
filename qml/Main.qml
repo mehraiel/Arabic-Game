@@ -15,10 +15,10 @@ GameWindow {
         anchors.fill: parent.gameWindowAnchorItem
         color:"#ffffee"
 
-        //Image {
-          //  id: background
-            //source: "../assets/اللغة-العربية.jpg"
-          //}
+//        Image {
+//            id: background
+//            source: "../images/اللغة-العربية.jpg"
+//          }
 
 
         Text{
@@ -36,7 +36,55 @@ GameWindow {
 
 
         Row{
-            spacing: 50
+            spacing: 100
+
+
+
+        GameButton{
+
+            onClicked: {
+
+            var component = Qt.createComponent("letters/letter.qml");
+                var window = component.createObject(gameWindow);
+                scene.visible=false
+                window.show
+            }
+
+            Image {
+                id: name1
+                source: "../images/letters.jpg"
+
+                 width:40
+                 height: 40
+              }
+
+        }
+
+         GameButton{
+
+             onClicked:{
+                 var component = Qt.createComponent("family/Scene.qml");
+                 var window = component.createObject(gameWindow);
+                 scene.visible=false
+                 window.show
+             }
+
+             Image {
+                 id: name2
+                 source: "../images/family.jpg"
+
+                  width:40
+                  height: 40
+               }
+         }
+
+
+        }
+
+
+        Row{
+            spacing: 70
+
 
 
         GameButton{
@@ -49,28 +97,81 @@ GameWindow {
                 window.show
             }
 
-        }
-   Rectangle{
-       Image {
-           id: name
-           source: "../images/family.jpg"
 
-           width:50
-           height: 50
-       }
-       IconButton{
-          onClicked:{
-              var component = Qt.createComponent("family/Scene.qml");
-                  var window = component.createObject(gameWindow);
-                  scene.visible=false
-                  window.show
+        }
+
+         GameButton{
+             text: "العائله"
+             onClicked:{
+                 var component = Qt.createComponent("family/Scene.qml");
+                 var window = component.createObject(gameWindow);
+                 scene.visible=false
+                 window.show
+             }
+
+
+         }
+
+
+        }
+
+        Row{
+            spacing: 100
+
+
+        GameButton{
+
+            onClicked: {
+
+            var component = Qt.createComponent("greetings/greeting.qml");
+                var window = component.createObject(gameWindow);
+                scene.visible=false
+                window.show
+            }
+
+            Image {
+                id: name3
+                source: "../images/greeting.jpg"
+
+                 width:40
+                 height: 40
               }
-          }
-       }
+
+        }
+
+
+        GameButton{
+
+            onClicked: {
+
+            var component = Qt.createComponent("tasks/Task2.qml");
+                var window = component.createObject(gameWindow);
+                scene.visible=false
+                window.show
+            }
+
+
+            Image {
+                id: name4
+                source: "../images/tasks.jpg"
+
+                 width:40
+                 height: 40
+              }
+
+
+        }
+
+
+        }
+
+
+
 
 
         Row{
-            spacing: 50
+            spacing: 70
+
 
         GameButton{
             text: "التحيات"
@@ -81,6 +182,7 @@ GameWindow {
                 scene.visible=false
                 window.show
             }
+
 
         }
 
@@ -95,13 +197,18 @@ GameWindow {
                 window.show
             }
 
+
+
+
         }
+
 
         }
 
 
         Row{
-            spacing: 50
+            spacing: 70
+
 
 
         GameButton{
@@ -112,19 +219,25 @@ GameWindow {
 
         }
 
-        }
-
 
         }
 
 
-
-
         }
-
-
 
 }
 
      }
 }
+
+
+
+
+
+
+
+
+
+
+
+

@@ -10,10 +10,21 @@ anchors.fill: parent.gameWindowAnchorItem
  }
     Text {
         id: txt
-        font.pixelSize: 30
+        font.pixelSize: 50
+        font.family: "Arabic Typesetting"
+           font.pointSize: 24
         anchors.horizontalCenter: parent.horizontalCenter
         text: qsTr("هيا نتعلم اسماء العائلة")
     }
+    GameButton{
+          text: "الرجوع"
+          onClicked: {
+              var component = Qt.createComponent("../Main.qml");
+              var window = component.createObject(gameWindow);
+               scen1.visible=false
+              window.show
+          }
+      }
 
  Rectangle {
        id: rectangle
@@ -49,12 +60,7 @@ anchors.fill: parent.gameWindowAnchorItem
            id:sound
            source: "./New folder/ابي.wav"
            loops: sound.Infinite
-
-
-
       }
-
-
      }
 
      Image {
@@ -66,12 +72,12 @@ anchors.fill: parent.gameWindowAnchorItem
        height: 100
        source: "../images/mother.jpg"
 
-
      Text {
          id:text1
          text: "أمي"
+         font.family: "Aref Ruqaa"
             font.pointSize: 30
-         anchors.bottom: img2.bottom
+            anchors.bottom: img2.bottom
          anchors.bottomMargin: -75
      }
      AppButton {
