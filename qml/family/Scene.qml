@@ -16,6 +16,8 @@ anchors.fill: parent.gameWindowAnchorItem
         anchors.horizontalCenter: parent.horizontalCenter
         text: qsTr("هيا نتعلم اسماء العائلة")
     }
+        ////button back to menu page
+
     GameButton{
           text: "الرجوع"
           onClicked: {
@@ -25,6 +27,7 @@ anchors.fill: parent.gameWindowAnchorItem
               window.show
           }
       }
+     ///////make rectangle to contain 2image and text
 
  Rectangle {
        id: rectangle
@@ -103,6 +106,7 @@ anchors.fill: parent.gameWindowAnchorItem
 
 
 
+ /////arrow to go to next page
 
    AppButton {
        id:btn3
@@ -123,6 +127,7 @@ anchors.fill: parent.gameWindowAnchorItem
 
 
    }
+   ////animation on images and text
    NumberAnimation {
           running: true             // Start automatically
           loops: Animation.alwaysRunToEnd// Repeat endless (unless stopped)
