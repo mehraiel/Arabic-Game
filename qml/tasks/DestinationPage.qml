@@ -4,7 +4,7 @@ import QtMultimedia 5.12
 import QtQuick.Controls 2.12
 
 Scene {
-    id: question1
+    id: destination
 
     Rectangle{
         id: rect_background
@@ -23,7 +23,6 @@ Scene {
 
             Row{
                 spacing: 10
-                anchors.bottomMargin: 500
                 //ProgressBar consists of two visual items: background and content item.
                 ProgressBar {
                     id: control

@@ -26,7 +26,7 @@ Scene {
                 width: 200
                 height: 200
                 backgroundColor: "transparent"
-
+                x: dp(50)
                 Image {
                         id: grandfather
                         anchors.fill: rect_grandfather
