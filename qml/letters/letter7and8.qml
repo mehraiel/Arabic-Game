@@ -3,7 +3,7 @@ import QtQuick 2.0
 import QtMultimedia 5.12
 
 Scene {
-  id:lett12
+  id:lett78
  Rectangle{
 anchors.fill: parent.gameWindowAnchorItem
  color: "white"
@@ -28,10 +28,10 @@ anchors.fill: parent.gameWindowAnchorItem
 
        width: 100
        height: 100
-       source: "../letters/image/alef.jpg"
+       source: "../letters/image/kha2.jpg"
        Text {
            id:text
-           text: "أ-الف"
+           text: "خ-خاء"
 
               font.pointSize: 30
            anchors.bottom: img1.bottom
@@ -47,7 +47,7 @@ anchors.fill: parent.gameWindowAnchorItem
       }
            SoundEffect{
            id:sound
-           source: "./sounds/alef.wav"
+           source: "./sounds/kha2.wav"
            loops: sound.Infinite
 
 
@@ -64,12 +64,12 @@ anchors.fill: parent.gameWindowAnchorItem
          anchors.rightMargin: 30
        width: 100
        height: 100
-       source: "../letters/image/ba2on.jpg"
+       source: "../letters/image/dal.jpg"
 
 
      Text {
          id:text1
-         text: "ب- باء"
+         text: "د-دال"
             font.pointSize: 30
          anchors.bottom: img2.bottom
          anchors.bottomMargin: -75
@@ -84,7 +84,7 @@ anchors.fill: parent.gameWindowAnchorItem
 }
          SoundEffect{
          id:sound1
-         source: "./sounds/ba2.wav"
+         source: "./sounds/dal.wav"
          loops: sound.Infinite
 
 
@@ -108,7 +108,7 @@ anchors.fill: parent.gameWindowAnchorItem
      flat: true
 
          onClicked: {
-             var component = Qt.createComponent("letter3and4.qml")
+             var component = Qt.createComponent("letter9and10.qml")
              var window =component.createObject(gameWindow)
             scene.visiblefalse
              window.show
