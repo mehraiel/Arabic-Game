@@ -96,8 +96,8 @@ Scene {
          onClicked: {
 
                      var component = Qt.createComponent("../Main.qml");
-                         var window = component.createObject(gameWindow);
-                         question1.visible=false
+                         var window = component.createObject(destination);
+                         destination.visible=false
                          window.show
 
                     }

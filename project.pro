@@ -68,9 +68,9 @@ DISTFILES += \
     qml/greetings/greeting.qml \
     qml/letters/letter.qml \
     qml/tasks/DestinationPage.qml \
-    qml/tasks/Task2.qml \
-    qml/tasks/Task3.qml \
-    qml/tasks/Task4.qml \
-    qml/tasks/Task5.qml \
-    qml/tasks/Task6.qml \
+    qml/tasks/Task01.qml \
+    qml/tasks/Task02.qml \
+    qml/tasks/Task03.qml \
+    qml/tasks/Task04.qml \
+    qml/tasks/Task05.qml \
     qml/tasks/task3

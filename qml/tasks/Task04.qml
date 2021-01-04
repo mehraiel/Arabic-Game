@@ -2,7 +2,7 @@ import QtQuick 2.0
 import Felgo 3.0
 import QtMultimedia 5.12
 Scene {
-    id: question3
+    id: question4
     Rectangle{
         anchors.fill: parent
         color:"#ffffff"
@@ -30,7 +30,7 @@ Scene {
                 Image {
                         id: grandfather
                         anchors.fill: rect_grandfather
-                        source: "../tasks/images/welcome3.png"
+                        source: "../tasks/images/grandfather.png"
                 }
 
                 onClicked: image_sound.play()
@@ -40,38 +40,38 @@ Scene {
                 id: selected_buttons
                 spacing: 10
                 AppButton{
-                    text: "مرحبا"
+                    text: "الام"
                     fontBold: true
                     textColor: "black"
                     backgroundColor: "white"
                     dropShadow: true  //if button is enabled
                     radius: 30
-                    backgroundColorPressed: "green"
+                    backgroundColorPressed: "red"
                     onClicked: {
-                        correct_sound.play()
-                        if(!correct_rect.visible){
-                            correct_rect.visible = true
+                        wrong_sound.play() //Sets the playing property to true.
+                        if(!wrong_rect.visible){
+                            wrong_rect.visible = true //if pressed in button wrong rectangle will be visible
                         }
                     }
                 }
                 AppButton{
-                     text: "عفوا"
+                     text: "الجد"
                      fontBold: true
                      textColor: "black"
                      backgroundColor: "white"
                      dropShadow: true  //if button is enabled
                      radius: 30
-                     backgroundColorPressed: "red"
+                     backgroundColorPressed: "green"
                      onClicked: {
-                         wrong_sound.play() //Sets the playing property to true.
-                         if(!wrong_rect.visible){
-                             wrong_rect.visible = true //if pressed in button wrong rectangle will be visible
+                         correct_sound.play()
+                         if(!correct_rect.visible){
+                             correct_rect.visible = true
                          }
                      }
 
                 }
                 AppButton{
-                     text: "من فضلك"
+                     text: "العمه"
                      fontBold: true
                      textColor: "black"
                      backgroundColor: "white"
@@ -94,7 +94,7 @@ Scene {
 
     SoundEffect {
         id : image_sound
-        source: "../tasks/sounds/Welcome_Sound.wav"
+        source: "../tasks/sounds/Grandpa_Sound.wav"
     }
 
     SoundEffect {
@@ -165,9 +165,9 @@ Scene {
            anchors.verticalCenter: parent.verticalCenter
            onClicked: {
 
-                       var component = Qt.createComponent("Task2.qml");
+                       var component = Qt.createComponent("Task05.qml");
                            var window = component.createObject(gameWindow);
-                           question3.visible=false
+                           question4.visible=false
                            window.show
 
                       }

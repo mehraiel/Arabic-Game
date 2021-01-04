@@ -2,7 +2,7 @@ import QtQuick 2.0
 import Felgo 3.0
 import QtMultimedia 5.12
 Scene {
-    id: question4
+    id: question2
     Rectangle{
         anchors.fill: parent
         color:"#ffffff"
@@ -17,7 +17,7 @@ Scene {
             anchors.centerIn: parent
 
             Text{
-              text: "اضغط علي الصوره وأختر الجواب الصحيح:"
+              text: "اضغط علي الصوره وأختر االحرف الاول المناسب للكلمه:"
             }
 
 
@@ -26,11 +26,11 @@ Scene {
                 width: 200
                 height: 200
                 backgroundColor: "transparent"
-
+                x: dp(50)
                 Image {
                         id: grandfather
                         anchors.fill: rect_grandfather
-                        source: "../tasks/images/grandfather.png"
+                        source: "../tasks/images/grape.png"
                 }
 
                 onClicked: image_sound.play()
@@ -40,12 +40,13 @@ Scene {
                 id: selected_buttons
                 spacing: 10
                 AppButton{
-                    text: "الام"
+                    text: "باء"
                     fontBold: true
                     textColor: "black"
                     backgroundColor: "white"
                     dropShadow: true  //if button is enabled
                     radius: 30
+
                     backgroundColorPressed: "red"
                     onClicked: {
                         wrong_sound.play() //Sets the playing property to true.
@@ -55,7 +56,7 @@ Scene {
                     }
                 }
                 AppButton{
-                     text: "الجد"
+                     text: "عين"
                      fontBold: true
                      textColor: "black"
                      backgroundColor: "white"
@@ -71,7 +72,7 @@ Scene {
 
                 }
                 AppButton{
-                     text: "العمه"
+                     text: "تاء"
                      fontBold: true
                      textColor: "black"
                      backgroundColor: "white"
@@ -94,7 +95,7 @@ Scene {
 
     SoundEffect {
         id : image_sound
-        source: "../tasks/sounds/Grandpa_Sound.wav"
+        source: "../tasks/sounds/Grape_Sound.wav"
     }
 
     SoundEffect {
@@ -165,9 +166,9 @@ Scene {
            anchors.verticalCenter: parent.verticalCenter
            onClicked: {
 
-                       var component = Qt.createComponent("Task3.qml");
+                       var component = Qt.createComponent("Task03.qml");
                            var window = component.createObject(gameWindow);
-                           question4.visible=false
+                           question2.visible=false
                            window.show
 
                       }

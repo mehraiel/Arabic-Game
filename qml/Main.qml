@@ -191,7 +191,7 @@ GameWindow {
             text: "التدريب"
             onClicked: {
 
-            var component = Qt.createComponent("tasks/Task4.qml");
+            var component = Qt.createComponent("tasks/Task01.qml");
                 var window = component.createObject(gameWindow);
                 scene.visible=false
                 window.show

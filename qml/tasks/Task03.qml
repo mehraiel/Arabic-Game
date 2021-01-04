@@ -2,7 +2,7 @@ import QtQuick 2.0
 import Felgo 3.0
 import QtMultimedia 5.12
 Scene {
-    id: question1
+    id: question3
     Rectangle{
         anchors.fill: parent
         color:"#ffffff"
@@ -17,7 +17,7 @@ Scene {
             anchors.centerIn: parent
 
             Text{
-              text: "اضغط علي الصوره وأختر االحرف الاول المناسب للكلمه:"
+              text: "اضغط علي الصوره وأختر الجواب الصحيح:"
             }
 
 
@@ -26,11 +26,11 @@ Scene {
                 width: 200
                 height: 200
                 backgroundColor: "transparent"
-                x: dp(50)
+
                 Image {
                         id: grandfather
                         anchors.fill: rect_grandfather
-                        source: "../tasks/images/book2.png"
+                        source: "../tasks/images/welcome3.png"
                 }
 
                 onClicked: image_sound.play()
@@ -40,7 +40,7 @@ Scene {
                 id: selected_buttons
                 spacing: 10
                 AppButton{
-                    text: "كاف"
+                    text: "مرحبا"
                     fontBold: true
                     textColor: "black"
                     backgroundColor: "white"
@@ -55,7 +55,7 @@ Scene {
                     }
                 }
                 AppButton{
-                     text: "باء"
+                     text: "عفوا"
                      fontBold: true
                      textColor: "black"
                      backgroundColor: "white"
@@ -71,7 +71,7 @@ Scene {
 
                 }
                 AppButton{
-                     text: "ياء"
+                     text: "من فضلك"
                      fontBold: true
                      textColor: "black"
                      backgroundColor: "white"
@@ -94,7 +94,7 @@ Scene {
 
     SoundEffect {
         id : image_sound
-        source: "../tasks/sounds/Book_Sound.wav"
+        source: "../tasks/sounds/Welcome_Sound.wav"
     }
 
     SoundEffect {
@@ -165,9 +165,9 @@ Scene {
            anchors.verticalCenter: parent.verticalCenter
            onClicked: {
 
-                       var component = Qt.createComponent("Task5.qml");
+                       var component = Qt.createComponent("Task04.qml");
                            var window = component.createObject(gameWindow);
-                           question1.visible=false
+                           question3.visible=false
                            window.show
 
                       }
